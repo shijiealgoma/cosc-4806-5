@@ -13,5 +13,12 @@ if (isset($_SESSION['auth']) == 1) {
     <meta name="viewport" content="width=device-width">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+    <!-- import index.css -->
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header class="bg-primary text-white py-3 mb-5">
+        <div class="container">
+            <h3>Reminder System</h3>
+        </div>
+    </header>

@@ -41,12 +41,12 @@ class Create extends Controller {
           // Redirect to login page
           $this->view('create/index');
         
-      }else if (strlen($password) < 8){
+      }else if (strlen($password) < 5){
 
-          // echo "Password must be at least 8 characters long!";
+          // echo "Password must be at least 5 characters long!";
         
           // Store error message in session
-          $_SESSION['error'] = "Password must be at least 8 characters long!";
+          $_SESSION['error'] = "Password must be at least 5 characters long!";
 
           // Redirect to login page
           $this->view('create/index');

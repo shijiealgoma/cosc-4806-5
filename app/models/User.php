@@ -49,6 +49,15 @@ class User {
             
 			unset($_SESSION['failedAuth']);
             unset($_SESSION['lastFailedAuthTime']);
+
+
+        
+            //if user is admin, set admin to true
+            if ($rows['username'] == "admin"){
+                $_SESSION['admin'] = true;
+            }
+                
+            
 			header('Location: /home');
 			die;
 		} else {

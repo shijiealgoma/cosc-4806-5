@@ -1,15 +1,17 @@
 <?php require_once 'app/views/templates/headerPublic.php'?>
 <main role="main" class="container">
     <div class="page-header" id="banner">
-        <div class="row">
+        <div class="row mb-3">
             <div class="col-lg-12">
-                <h1>You are not logged in</h1>
-								<?php
-										if($_SESSION['failedAuth']){
-											echo "login attempts: " . $_SESSION['failedAuth'];
-										}
-							
-								?>
+                <h1 class="title-style">Welcome, Dear user!</h1>
+								<div>You are not logged in</div>
+								<div class="mt-3">
+									<?php if(isset($_SESSION['failedAuth']) && $_SESSION['failedAuth']): ?>
+										<div class="alert alert-danger" role="alert">
+											<?php echo "Login fail - Login attempts: " . $_SESSION['failedAuth']; ?>
+										</div>
+									<?php endif; ?>
+								</div>
             </div>
         </div>
     </div>
@@ -59,4 +61,6 @@
 	
 <?php 
 						} ?>
+
+</main>
     <?php require_once 'app/views/templates/footer.php' ?>
