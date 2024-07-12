@@ -33,10 +33,6 @@ header h1 {
   margin: 0;
 }
 
-/* nav {
-  margin: 20px 0;
-  text-align: center;
-} */
 
 nav a {
   margin: 0 15px;
@@ -101,4 +97,31 @@ footer {
 
 .pr50{
   padding-right:50px;
+}
+
+.logins-table td,
+.logins-table th{
+  padding: 0 10px;
+}
+
+
+.chat-th{
+  width: 400px;
+  max-width:100%;
+}
+
+.bar {
+    height: 20px;
+    background-color: #4CAF50;
+    text-align: center;
+    color: white;
+    animation: colorChange 3s infinite;
+    border-radius: 10px;
+}
+
+
+@keyframes colorChange {
+  0% { background-color: #4CAF50; }
+  50% { background-color: #456da1; }
+  100% { background-color: #4CAF50; }
 }

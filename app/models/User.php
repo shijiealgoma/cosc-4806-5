@@ -55,6 +55,8 @@ class User {
             //if user is admin, set admin to true
             if ($rows['username'] == "admin"){
                 $_SESSION['admin'] = true;
+            }else{
+                $_SESSION['admin'] = false;
             }
                 
             
@@ -64,14 +66,15 @@ class User {
             // echo "Login failed";
             //loginLog
             $this->loginLog($username, 0, "failed to login");
+            
           
             if(isset($_SESSION['failedAuth'])) {
                 $_SESSION['failedAuth'] ++; //increment
-            $_SESSION['lastFailedAuthTime'] = time();
+                $_SESSION['lastFailedAuthTime'] = time();
             
             } else {
                 $_SESSION['failedAuth'] = 1;
-            $_SESSION['lastFailedAuthTime'] = time();
+                $_SESSION['lastFailedAuthTime'] = time();
             }
 
             // echo "<br>Login attempts: " . $_SESSION['failedAuth'];
