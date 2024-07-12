@@ -4,7 +4,7 @@ class Reports extends Controller {
 
     public function index() {
       
-      if (isset($_SESSION['admin']) == 1){
+      if (isset($_SESSION['admin']) && $_SESSION['admin']){
 
         $admin = $this->model('Admin');
         $list_of_reminders = $admin->get_all_reminders();

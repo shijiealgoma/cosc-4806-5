@@ -49,6 +49,7 @@ class User {
             
 			unset($_SESSION['failedAuth']);
             unset($_SESSION['lastFailedAuthTime']);
+            unset($_SESSION['admin']);
 
 
         
@@ -58,6 +59,8 @@ class User {
             }else{
                 $_SESSION['admin'] = false;
             }
+
+            // echo "admin status: " . $_SESSION['admin'];
                 
             
 			header('Location: /home');

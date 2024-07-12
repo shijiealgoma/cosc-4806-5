@@ -3,7 +3,8 @@
     <div class="page-header" id="banner">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Hey</h1>
+                <h1>Hey, <?php echo $_SESSION['admin']?"Admin User":"Not Admin User"; ?></h1>
+                <p> Admin status: <?php echo $_SESSION['admin']?"True":"False"; ?></p>
                 <p><a href="/reminders">Go to Reminders</a></p>
                 <p class="lead"> <?= date("F jS, Y"); ?></p>
             </div>
